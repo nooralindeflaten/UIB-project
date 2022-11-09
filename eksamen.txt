@@ -1,0 +1,90 @@
+
+1. Classic ciphers
+
+--- Ceacar cipher
+a ceacar cipher is used to decrypt or encrypt a message using the
+alphabet and shift. Where the shift is just shifting a letter to another 
+letter futher along the alphabet. 
+
+
+-- monoalphabetic cipher
+works the same as the Ceasar Cipher, except it's done by shuffeling and matching
+the most frequent letter in the given message to the most frequent used letter in the english
+alphabet. from HELLO to BDHHT. this means since the most frequent is H 
+we can now guess that all H'es are equal to E. the most frequent.
+this would mean that:
+AHD - encrypted.
+HEI - Decrypted
+
+
+--- Vigenere cipher
+Key is a sequence of numbers, which corresponds to how many 
+steps the letter is going to be shuffled. the key will
+expand to fit the length of the message. 
+
+-- Stream
+LFSR, 
+linear feedback register.
+contains functions. 
+loops some time because the number of possible states is finite.
+the steps it takes to loop back is a cycle of length steps
+Polynomial.
+the largest exponent is the number of cells. the remaining
+is the number of cells who are connected to the feedback line.
+the maximal length is 2^m -1
+attack by known plaintext attack. since lfsr is a keystream generator
+xoring the plaintext and part of the cipher text we can recover
+100 bits of the keystream. 
+recover connections in its feedback line. 
+
+----Elgamal digital signature scheme.
+
+RSA scheme:
+
+- pick two large primes p,q
+- compute n = pq and m = phi(n) = (p-1)*(q-1)
+- pick e in Zm with gcd(e,m) = 1
+- take d = e^-1 mod m 
+- publish(n,e) as the public key and preserve d as a private key
+
+----- signature 
+given a message x in Zn
+compute s = x^d mod n 
+the signed message is (x,s)
+
+-- verification
+given a pair (x,s) of a message and a signature
+compute x' = s^e mod n 
+accept the message if and only if x = x'
+
+---DSA
+
+Pollard's method 
+B = g^x mod p
+x = i2-i1 / j1-j2 mod p
+
+verify:
+s = (x-dr)*Ke mod (p-1)
+B = g^d mod p 
+2^12 mod 29 = 7
+
+t = B^r*r^s mod p 
+
+# first verify r. so we have a key for r.
+# now we use this r to compute s. and to check the correct key here
+# we need a new key so that 
+
+DHKE first. 
+
+Boolean:
+
+-- Gold function f(x) = x^3 in F2^n
+-- that is as an (n,n) function is known to have differential 
+uniformity equal to 2. the best possible value. for any n 
+truth table for n = 4, n = 5, n = 6
+given as a list (2^n-1)
+
+
+x^4 = x^2+2^2
+it has roots
+so if we write x^4 = x^

@@ -1,0 +1,30 @@
+
+program:
+signalbehandling ved hjelp av lister
+lese inn simulert sensor data fra aksellerometer
+som en gående person bærer med seg og tolke dataen for å telle skritt
+
+oppgave 0, lag en funksjon som regner gjennomsnittet av list:
+
+
+opggave 1
+0-punktkryssing 
+x, y i liste,
+x > 0, og y <= 0.
+eller motsatt 
+x <= 0, of y > 0. 
+
+Num a, Ord a
+
+
+oppgave 3
+gjennomsnittet av de n nyeste verdiene. 
+
+lpf :: (Fractional a) => Integer -> [a] -> a
+lpf xs n = avrage xs' where xs' = take n [x | x <- fromIntegral xs]
+runhaskell Oblig0Ver1.hs Oblig0Common.hs < testData0
+
+
+
+Fag:
+

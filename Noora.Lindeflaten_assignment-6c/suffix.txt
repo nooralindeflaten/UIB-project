@@ -1,0 +1,18 @@
+Tasl 6.3.1 Can be found in Pam8USignatureAST, but my thought was that 
+IntrinsicsYarn1 would be for both 6.3.1 and 6.3.2
+
+Task 6.3.3 can be found in IntrinsicsYarn2
+
+
+
+Task 6.3.4
+
+The calculators are too specific for the types, this could cause bugs and mistakes
+when adding other stuff to the program. They can also produce wrong anwsers because They
+still use some of the same modules, which can affect each calculator different. 
+It can also be harder for a user to know which unit or variable they should use to 
+preform the calculations. For instance Calculator 1 can have issues with loosing the unit
+name while accessing functions that makes the input for the function wrong.
+
+The second calculator can't accept other forms of valuedomains than Double (This isn't a big issue),
+but what if the user wants to use variables for calculating things instead of literal doubles. 
